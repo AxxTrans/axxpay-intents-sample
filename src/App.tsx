@@ -59,8 +59,8 @@ const styles = StyleSheet.create({
 
 function App(): JSX.Element {
   const [payload, setPayload] = useState('');
-  const [registrationCode, setRegistrationCode] = useState<number>(200);
-  const [transactionCode, setTransactionCode] = useState<number>(300);
+  const [registrationCode, setRegistrationCode] = useState<number>();
+  const [transactionCode, setTransactionCode] = useState<number>();
   const [transactionId, setTransactionId] = useState('');
   const isDarkMode = useColorScheme() === 'dark';
 
