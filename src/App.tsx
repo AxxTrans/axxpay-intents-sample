@@ -96,6 +96,7 @@ function App(): JSX.Element {
           style={styles.input}
           value={payload}
           onChangeText={setPayload}
+          placeholder="Base64 payload"
         />
         <Button
           title="Register"
@@ -124,6 +125,7 @@ function App(): JSX.Element {
           style={styles.input}
           value={transactionId}
           onChangeText={setTransactionId}
+          placeholder="Transaction ID"
         />
         <Button
           title="Transaction"
