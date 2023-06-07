@@ -69,13 +69,20 @@ function App(): JSX.Element {
   };
 
   async function handleRegisterPress() {
-    await IntentModule.makeIntent({payload}, operationCode => {
-      setRegistrationCode(operationCode);
-    });
+    // take "payload" from input
+    await IntentModule.makeIntent(
+      {payload},
+      // and invoke the callback in response
+      operationCode => {
+        setRegistrationCode(operationCode);
+      },
+    );
   }
   async function handleTransactionPress() {
+    // take "transactionId" from input
     await IntentModule.makeIntent(
       {transactionRequestId: transactionId},
+      // and invoke the callback in response
       operationCode => {
         setTransactionCode(operationCode);
       },
